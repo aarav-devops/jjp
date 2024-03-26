@@ -47,7 +47,7 @@
 	    </pluginRepository>
 	</pluginRepositories>
 
-	<!-- Add or Modify the Build Section with Compiler Plugin Configuration -->
+	<!-- Maven Compiler Plugin Configuration -->
 	<build>
 		<plugins>
 			<plugin>
@@ -58,6 +58,13 @@
 					<source>7</source> <!-- Update source version to 7 -->
 					<target>7</target> <!-- Update target version to 7 -->
 				</configuration>
+			</plugin>
+			
+			<!-- Maven War Plugin Configuration -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version> <!-- Update to a newer version -->
 			</plugin>
 		</plugins>
 	</build>
