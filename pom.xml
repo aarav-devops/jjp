@@ -11,6 +11,7 @@
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 	</properties>	
+	
 	<dependencies>
 		<dependency>
 		    <groupId>com.oracle.bedrock</groupId>
@@ -24,14 +25,13 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 	
 	<distributionManagement>
-		 <snapshotRepository>
+		<snapshotRepository>
 		    <id>nexusRepo</id>
 		    <url>http://13.233.230.166:8081/repository/maven-snapshots/</url>
-		 </snapshotRepository>
+		</snapshotRepository>
 		
 		<repository>
 		    <id>nexusRepo</id>
@@ -41,11 +41,24 @@
 	
 	<pluginRepositories>
 	    <pluginRepository>    
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven2</url>
+			<id>maven1</id>
+			<name>Maven.org</name>
+			<url>http://repo1.maven.org/maven2</url>
 	    </pluginRepository>
 	</pluginRepositories>
 
-	
+	<!-- Add or Modify the Build Section with Compiler Plugin Configuration -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>7</source> <!-- Update source version to 7 -->
+					<target>7</target> <!-- Update target version to 7 -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
